@@ -31,6 +31,6 @@ const travel = async function(req, res, next) {
     //console.log('TRAVEL CONTROLLER AFTER RENDER');
 }
 
- module.exports = {
+module.exports = {
     travel
  };
