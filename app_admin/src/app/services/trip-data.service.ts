@@ -45,6 +45,14 @@ export class TripDataService {
     });
   }
 
+  deleteTrip(formData: Trip): Observable<Trip[]> {
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${localStorage.getItem('travlr-token')}`,
+    });
+    return this.http.delete<Trip[]>(this.tripUrl+ '/' + formData.code, { headers: headers });
+  }
+
   public login(user: User): Promise<AuthResponse> {
     return this.makeAuthApiCall('login', user);
   }

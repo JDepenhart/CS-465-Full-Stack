@@ -110,6 +110,27 @@ const tripsUpdateTrip = async (req, res) => {
     });
 };
 
+const tripsDeleteTrip =  async (req, res) => {
+  console.log("Delete trip called", req.params.tripCode);
+  await getUser(req, res, (req, res) => {
+    try {
+      const q = Model.findOneAndDelete (
+        { code: req.params.tripCode }
+      ).exec();
+      if (!q) {
+        // Database returned no data
+        return res.status(404).json({ message: "Trip not found" });
+      } else {
+        // Return resulting updated trip
+        return res.status(200).json(q);
+      }
+    } catch (error) {
+      console.error("Error deleting trip:", error);
+      return res.status(500).json({ error: "Internal server error" });
+    }
+  });
+};
+
 const getUser = async (req, res, callback) => {
     if (req.auth && req.auth.email) {
       try {
@@ -129,5 +150,6 @@ module.exports = {
     tripsList,
     tripsFindByCode,
     tripsAddTrip,
-    tripsUpdateTrip
+    tripsUpdateTrip,
+    tripsDeleteTrip
 };
