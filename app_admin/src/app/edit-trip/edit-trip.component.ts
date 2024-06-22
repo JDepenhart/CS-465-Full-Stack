@@ -33,7 +33,7 @@ export class EditTripComponent implements OnInit {
     let tripCode = localStorage.getItem("tripCode");
     if (!tripCode) {
       alert("Something wrong, couldn't find where I stashed tripCode!");
-      this.router.navigate(['']);
+      this.router.navigate(['list-trips']);
       return;
     }
 
@@ -80,7 +80,7 @@ export class EditTripComponent implements OnInit {
       .subscribe({
         next: (value: any) => {
           console.log(value);
-          this.router.navigate(['']);
+          this.router.navigate(['list-trips']);
         },
         error: (error: any) => {
           console.log('Error: ' + error);
