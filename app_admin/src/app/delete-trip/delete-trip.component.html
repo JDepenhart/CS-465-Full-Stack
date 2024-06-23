@@ -1,0 +1,19 @@
+<div class="col-md-4">
+    <h2 class="text-center">Delete Trip</h2>
+    <form *ngIf="deleteForm" [formGroup]="deleteForm" (ngSubmit)="onSubmit()">
+
+        <!-- Code -->
+        <div class="form-group">
+            <label>Code:</label>
+            <input type="text" formControlName="code"
+                placeholder="Code" class="form-control"
+                [ngClass]="{ 'is-invalid': submitted && f['code'].errors }">
+            <div *ngIf="submitted && f['code'].errors">
+                <div *ngIf="f['code'].errors?.['required']">
+                    Trip Code is required
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-info">Confirm</button>
+    </form>
+</div>
