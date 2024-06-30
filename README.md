@@ -7,7 +7,7 @@ CS-465 Full Stack Development with MEAN
 Architecture
 Compare and contrast the types of front-end development you used in your full stack project, including Express HTML, JavaScript, and the single-page application (SPA).
 	
-Full stack development seems to combine a multitude of tools and languages to complete a project, more so than any other class had us do. These tools are different from one another and thus provide different experiences and challenges.  JavaScript was the most straightforward as it was similar enough to other programming languages. Express HTML is more of a markup language and thus is entirely different from programming languages. Particularly in the way it is formatted. SPAs are different in the way that they require a lot more work than the other two types of front-end development, at least based on this experience.
+	Full stack development seems to combine a multitude of tools and languages to complete a project, more so than any other class had us do. These tools are different from one another and thus provide different experiences and challenges.  JavaScript was the most straightforward as it was similar enough to other programming languages. Express HTML is more of a markup language and thus is entirely different from programming languages. Particularly in the way it is formatted. SPAs are different in the way that they require a lot more work than the other two types of front-end development, at least based on this experience.
 
 Why did the backend use a NoSQL MongoDB database?
 
